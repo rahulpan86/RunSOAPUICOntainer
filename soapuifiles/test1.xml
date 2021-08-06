@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a88ec8f6-1c73-4ab1-9f69-835d58091633" activeEnvironment="Default" name="REST Project 1" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+	<con:settings>
+		<con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.LoadTestRunnerAction@values-local">
+			<![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Print Report Statistics" value="false"/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="Sample TestSuite"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Report to Generate" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="LoadTest" value="Sample LoadTest"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="ThreadCount" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="Sample Test Case -Get"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\SoapUI-5.6.0/bin"/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Limit" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]>
+		</con:setting>
+	</con:settings>
+	<con:interface xsi:type="con:RestService" id="ab8a479f-7be6-44aa-8d09-7b6942f927be" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://LoadBalancerForCloudMolecule-2143442787.us-east-2.elb.amazonaws.com:80" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		<con:definitionCache/>
+		<con:endpoints>
+			<con:endpoint>http://LoadBalancerForCloudMolecule-2143442787.us-east-2.elb.amazonaws.com:80</con:endpoint>
+		</con:endpoints>
+		<con:resource name="Greeting" path="/ws/rest/greeting/getGreeting/" id="abd41609-03bf-4858-973f-5b4adcbecb09">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Greeting 1" id="ea397b94-9b1e-4976-b34a-b829a84f39cc" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType xsi:nil="true"/>
+					<con:status>0</con:status>
+					<con:params/>
+					<con:element>data</con:element>
+				</con:representation>
+				<con:representation type="FAULT">
+					<con:mediaType>text/html; charset=iso-8859-1</con:mediaType>
+					<con:status>404</con:status>
+					<con:params/>
+					<con:element>html</con:element>
+				</con:representation>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element xmlns:gre="http://LoadBalancerForCloudMolecule-2143442787.us-east-2.elb.amazonaws.com/ws/rest/greeting">gre:Response</con:element>
+				</con:representation>
+				<con:request name="Request 1" id="ca8b59c6-6a1e-4801-8241-9df896740b60" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+					</con:settings>
+					<con:endpoint>http://LoadBalancerForCloudMolecule-2143442787.us-east-2.elb.amazonaws.com:80</con:endpoint>
+					<con:request/>
+					<con:originalUri>http://LoadBalancerForCloudMolecule-2143442787.us-east-2.elb.amazonaws.com/ws/rest/greeting</con:originalUri>
+					<con:credentials>
+						<con:username>test@boomi_sub2_rahulpanicker-44FFY5.MMCYTS</con:username>
+						<con:password>e8352d9c-da02-4ae4-891b-645663b095f5</con:password>
+						<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+						<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+						<con:authType>Global HTTP Settings</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+	</con:interface>
+	<con:testSuite id="33fe1dc2-dc38-41c3-bfaa-b63650cb2a1c" name="Sample TestSuite">
+		<con:settings/>
+		<con:runType>SEQUENTIAL</con:runType>
+		<con:testCase id="27973445-993c-4dd7-95c9-2823ed356854" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Sample Test Case -Get" searchProperties="true">
+			<con:settings/>
+			<con:testStep type="restrequest" name="REST Request -Get" id="adf7b311-49f0-4ff6-8b2e-5c715a094d9f">
+				<con:settings/>
+				<con:config service="http://LoadBalancerForCloudMolecule-2143442787.us-east-2.elb.amazonaws.com:80" resourcePath="/ws/rest/greeting/getGreeting/" methodName="Greeting 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:restRequest name="REST Request -Get" id="ca8b59c6-6a1e-4801-8241-9df896740b60" mediaType="application/json">
+						<con:settings>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						</con:settings>
+						<con:endpoint>http://LoadBalancerForCloudMolecule-2143442787.us-east-2.elb.amazonaws.com:80</con:endpoint>
+						<con:request/>
+						<con:originalUri>http://LoadBalancerForCloudMolecule-2143442787.us-east-2.elb.amazonaws.com/ws/rest/greeting</con:originalUri>
+						<con:credentials>
+							<con:username>test@boomi_sub2_rahulpanicker-44FFY5.MMCYTS</con:username>
+							<con:password>e8352d9c-da02-4ae4-891b-645663b095f5</con:password>
+							<con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+							<con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+							<con:authType>Global HTTP Settings</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
+					</con:restRequest>
+				</con:config>
+			</con:testStep>
+			<con:loadTest id="df60eedb-58da-456d-9aad-c45be8a27528" name="Sample LoadTest">
+				<con:settings>
+					<con:setting id="HttpSettings@close-connections">false</con:setting>
+				</con:settings>
+				<con:threadCount>100</con:threadCount>
+				<con:startDelay>0</con:startDelay>
+				<con:sampleInterval>250</con:sampleInterval>
+				<con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed>
+				<con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange>
+				<con:historyLimit>-1</con:historyLimit>
+				<con:testLimit>10</con:testLimit>
+				<con:limitType>TIME</con:limitType>
+				<con:loadStrategy>
+					<con:type>Simple</con:type>
+				</con:loadStrategy>
+				<con:assertion type="Step Status" name="Step Status"/>
+				<con:maxAssertionErrors>100</con:maxAssertionErrors>
+				<con:cancelExcessiveThreads>true</con:cancelExcessiveThreads>
+				<con:strategyInterval>500</con:strategyInterval>
+			</con:loadTest>
+			<con:properties/>
+		</con:testCase>
+		<con:properties/>
+	</con:testSuite>
+	<con:properties/>
+	<con:wssContainer/>
+	<con:oAuth2ProfileContainer/>
+	<con:oAuth1ProfileContainer/>
+</con:soapui-project>
